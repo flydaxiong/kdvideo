@@ -1,0 +1,8 @@
+server:
+  port: 8082
+
+obs:
+  ak: UQCQXNAKPGW8EC4ANDNI
+  sk: RlTzPz7WuMeEOf0OsJ3itkLN83ZLYcNn5hIBZJcr
+  bucket: ddvideo
+  endPoint: obs.cn-north-4.myhuaweicloud.com
