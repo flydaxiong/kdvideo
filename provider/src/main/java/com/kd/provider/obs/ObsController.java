@@ -26,15 +26,11 @@ public class ObsController {
     @RequestMapping(value = "/upload" , method = RequestMethod.POST)
     public void obs(MultipartFile multipartFile) throws Exception {
         InputStream inputStream = multipartFile.getInputStream();
-        obsUtils.uploadFile(inputStream,multipartFile.getOriginalFilename());
+      //  obsUtils.uploadFile(inputStream,multipartFile.getOriginalFilename());
+        obs.uploadFile(inputStream,multipartFile.getOriginalFilename());
     }
 
-    @ResponseBody
-    @ApiOperation("文件上传的速度")
-    @RequestMapping(value = "/speed" , method = RequestMethod.POST)
-    public void uploadSpeed(MultipartFile multipartFile){
-        obsUtils.uploadSpeed(multipartFile,multipartFile.getName());
-    }
+
 
     @ResponseBody
     @ApiOperation("文件下载")

@@ -2,7 +2,9 @@ package com.kd.provider.mapper;
 
 
 
-import org.mapstruct.Mapper;
+
+
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 

@@ -23,12 +23,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56fad975-054e-44f3-abbc-aaa2e7f39d37" name="Default Changelist" comment="添加图片上传">
-      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/controller/indexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/scheduleTask/DynamicScheduleTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/ProviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/ProviderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/mapper/ImageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/mapper/ImageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/obs/ObsConfigProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/obs/ObsConfigProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/obs/ObsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/obs/ObsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/obs/ObsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/obs/ObsUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -51,6 +71,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -59,12 +83,15 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kd.provider.scheduleTask" />
+      <recent name="com.kd.provider.obs" />
       <recent name="com.kd.provider.controller" />
       <recent name="com.kd.provider.config" />
     </key>
@@ -74,7 +101,7 @@
       <recent name="E:\kd\kdvideo\provider\src\main\java\com\kd\provider\obs" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConsumerApplication">
+  <component name="RunManager" selected="Spring Boot.ProviderApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -82,6 +109,22 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kd.provider.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kd.provider" />
+      <option name="MAIN_CLASS_NAME" value="com.kd.provider.test" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,8 +143,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.test.test01" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="56fad975-054e-44f3-abbc-aaa2e7f39d37" name="Default Changelist" comment="" />
@@ -109,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606892942749</updated>
-      <workItem from="1606892944154" duration="1021000" />
+      <workItem from="1606892944154" duration="5260000" />
     </task>
     <task id="LOCAL-00001" summary="添加图片上传">
       <created>1606893828987</created>
@@ -125,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606893914926</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加图片上传">
+      <created>1606893975500</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606893975500</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,13 +209,49 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="395" y="95" key="#Inspections/0.0.1536.834@0.0.1536.834" timestamp="1606893427941" />
+    <state width="1493" height="260" key="GridCell.Tab.0.bottom" timestamp="1606898025395">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1606898025395" />
+    <state width="1493" height="260" key="GridCell.Tab.0.center" timestamp="1606898025395">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1606898025395" />
+    <state width="1493" height="260" key="GridCell.Tab.0.left" timestamp="1606898025395">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1606898025395" />
+    <state width="1493" height="260" key="GridCell.Tab.0.right" timestamp="1606898025395">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1606898025395" />
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1606898025395">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1606898025395" />
+    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1606898025395">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1606898025395" />
+    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1606898025395">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1606898025395" />
+    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1606898025395">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1606898025395" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1606893645728">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="299" y="72" key="Maven.ArtifactSearchDialog/0.0.1536.834@0.0.1536.834" timestamp="1606893645728" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1606892973887">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1606896215427">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1606892973887" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1606896215427" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1606894331878">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1606894331878" />
   </component>
 </project>

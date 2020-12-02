@@ -7,12 +7,14 @@ import net.bytebuddy.implementation.bytecode.Throw;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedOutputStream;
@@ -26,22 +28,26 @@ import java.util.Map;
 @Component
 public class ObsUtils {
 
-    @Value("${obs.endPoint}")
-    private String endPoint;
-
-    @Value("${obs.ak}")
-    private String ak;
-
-    @Value("${obs.sk}")
-    private String sk;
-
-    @Value("${obs.bucket}")
-    private String bucket;
 
 
 
+    private static ObsConfigProperties configProperties;
+
+    private static ObsClient obsClient;
+
+    public ObsUtils() {}
 
     private static final Logger log= LoggerFactory.getLogger(ObsUtils.class);
+
+    @Autowired
+    public void setProperties(ObsConfigProperties obsConfigProperties) {
+        configProperties = obsConfigProperties;
+    }
+
+    @PostConstruct
+    private void init(){
+        obsClient = new ObsClient(configProperties.getAk(),configProperties.getSk(),configProperties.getEndPoint());
+    }
 
     /**
      * 通过输入流的方式上传文件
@@ -50,8 +56,7 @@ public class ObsUtils {
      * @return
      */
     public void uploadFile(InputStream inputStream,String fileName) {
-        ObsClient obsClient = new ObsClient(ak,sk,endPoint);
-        PutObjectResult putObjectResult = obsClient.putObject(bucket, fileName, inputStream);
+        PutObjectResult putObjectResult = obsClient.putObject(configProperties.getBucket(), fileName, inputStream);
         int statusCode = putObjectResult.getStatusCode();
         String objectUrl = putObjectResult.getObjectUrl();
         System.out.println(objectUrl);
@@ -60,36 +65,14 @@ public class ObsUtils {
         }
     }
 
-    /**
-     * 获取文件上传的速率
-     * @param
-     * @param fileName
-     */
-    public  void uploadSpeed(MultipartFile multipartFile, String fileName){
-        ObsClient obsClient = new ObsClient(ak, sk, endPoint);
-        PutObjectRequest request = new PutObjectRequest(bucket, fileName);
-        request.setFile(new File(fileName));
-        request.setProgressListener(new ProgressListener() {
-            @Override
-            public void progressChanged(ProgressStatus status) {
-                // 上传的平均速率
-                System.out.println("平均速率: "+ status.getAverageSpeed());
-                // 获取上传进度的百分比
-                System.out.println("百分比: "+ status.getTransferPercentage());
-            }
-        });
-        // 每上传1K数据反馈上传进度
-        request.setProgressInterval(1024);
-        obsClient.putObject(request);
-    }
+
 
     /**
      * 文件下载
      * @param fileName
      */
     public void download(String fileName , HttpServletResponse response , HttpServletRequest request) throws IOException {
-        ObsClient obsClient = new ObsClient(ak, sk, endPoint);
-        ObsObject object = obsClient.getObject(bucket, fileName);
+        ObsObject object = obsClient.getObject(configProperties.getBucket(), fileName);
         // 读取对象内容
         InputStream inputStream = object.getObjectContent();
         byte[] b = new byte[1024];
@@ -114,17 +97,16 @@ public class ObsUtils {
     public String image(String imageName){
         long expireSeconds = 3600L;
         // 创建ObsClient实例
-        final ObsClient obsClient = new ObsClient(ak, sk, endPoint);
         TemporarySignatureRequest request = new TemporarySignatureRequest(HttpMethodEnum.GET, expireSeconds);
         try {
-            ObsObject object = obsClient.getObject(bucket, imageName);
+            ObsObject object = obsClient.getObject(configProperties.getBucket(), imageName);
             String objectKey = object.getObjectKey();
             System.out.println(objectKey);
         }catch (Exception e){
             log.error("图片不存在"+imageName);
             return "";
         }
-        request.setBucketName(bucket);
+        request.setBucketName(configProperties.getBucket());
         request.setObjectKey(imageName);
         // 设置图片处理参数，对图片依次进行缩放、旋转
         Map<String, Object> queryParams = new HashMap<String, Object>();
