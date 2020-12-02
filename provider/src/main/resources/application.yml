@@ -1,6 +1,29 @@
 server:
   port: 8082
 
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/kd?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: html
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    password:
+
+# 配置为 com.iflytek.jevic.tools.entity 指向实体类包路径。
+# 配置为 classpath 路径下 mapper 包下，* 代表会扫描所有 xml 文件
+mybatis:
+  type-aliases-package: com.kd.demo.entity
+  mapper-locations: classpath*:mapper/*.xml
+
 obs:
   ak: UQCQXNAKPGW8EC4ANDNI
   sk: RlTzPz7WuMeEOf0OsJ3itkLN83ZLYcNn5hIBZJcr
