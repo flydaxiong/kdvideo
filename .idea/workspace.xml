@@ -23,8 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56fad975-054e-44f3-abbc-aaa2e7f39d37" name="Default Changelist" comment="添加图片上传">
-      <change afterPath="$PROJECT_DIR$/provider/src/main/resources/mapper/ImageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/kd/provider/controller/indexController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +65,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kd.provider.controller" />
       <recent name="com.kd.provider.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -109,7 +109,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606892942749</updated>
-      <workItem from="1606892944154" duration="950000" />
+      <workItem from="1606892944154" duration="1021000" />
     </task>
     <task id="LOCAL-00001" summary="添加图片上传">
       <created>1606893828987</created>
@@ -118,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606893828987</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加图片上传">
+      <created>1606893914926</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606893914926</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
