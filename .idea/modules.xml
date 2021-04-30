@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/kdvideo.iml" filepath="$PROJECT_DIR$/.idea/kdvideo.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/consumer/consumer.iml" filepath="$PROJECT_DIR$/consumer/consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/kdvideo.iml" filepath="$PROJECT_DIR$/.idea/kdvideo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider/provider.iml" filepath="$PROJECT_DIR$/provider/provider.iml" />
+>>>>>>> 6a5f87cd33f87abc5c6948c757807f17ec66cfe6
     </modules>
   </component>
 </project>
