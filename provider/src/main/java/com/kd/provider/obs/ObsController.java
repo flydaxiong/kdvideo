@@ -27,7 +27,7 @@ public class ObsController {
     public void obs(MultipartFile multipartFile) throws Exception {
         InputStream inputStream = multipartFile.getInputStream();
       //  obsUtils.uploadFile(inputStream,multipartFile.getOriginalFilename());
-        obs.uploadFile(inputStream,multipartFile.getOriginalFilename());
+        obsUtils.uploadFile(inputStream,multipartFile.getOriginalFilename());
     }
 
 
